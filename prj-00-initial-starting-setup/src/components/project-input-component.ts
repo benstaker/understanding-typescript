@@ -1,7 +1,7 @@
-import { Component } from './base-component.js';
-import { Autobind } from '../decorators/autobind-decorator.js';
-import { projectState } from '../state/project-state.js';
-import { validateInputValue } from '../util/validation-util.js';
+import { Component } from './base-component';
+import { Autobind } from '../decorators/autobind-decorator';
+import { projectState } from '../state/project-state';
+import { validateInputValue } from '../util/validation-util';
 
 type ProjectInputValues = [string, string, number];
 
@@ -27,7 +27,7 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
     }
 
     private clearInputValues(): void {
-        this.titleInputElement.value = '.js';
+        this.titleInputElement.value = '';
         this.descriptionInputElement.value = '';
         this.peopleInputElement.value = '';
     }
